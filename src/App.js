@@ -14,11 +14,6 @@ export default function App() {
       <AmourBoard></AmourBoard>
       <MessageSection></MessageSection>
       <But></But>
-      <h1>Hello StackBlitz!</h1>
-      <p>
-        Start editing to see some magic happen :)
-        <span>musa</span>
-      </p>
     </div>
   );
 }

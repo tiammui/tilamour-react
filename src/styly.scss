@@ -1,13 +1,109 @@
-h1,
-p {
-  color: blue;
-  span {
-    color: red;
-  }
+// focus: Initializing Variables (must be above import of defaults.scss)
+$regular-font: 'Roboto', Arial, Helvetica, sans-serif;
+$title-font: 'SUI Bold', Tahoma, Geneva, Verdana, sans-serif;
+$default-font-size: 18px; // 1rem, 15px=0.83rem,13px=0.72rem,12px=0.67rem,11px=0.61rem,24px=1.33rem
+
+// focus: Variables (e.g color-scheme etc.)
+$neutral-primary: white;
+$neutral-secondary: black;
+$light-color: rgb(255, 174, 201);
+$dark-light-color: rgb(0, 255, 255);
+$dark-color: rgb(175, 0, 116);
+$very-dark-color: rgb(105, 0, 70);
+
+$negative-color: orange;
+$negative-light-color: rgb(255, 226, 173);
+$negative-dark-color: rgb(129, 84, 0);
+
+$privacy-color: rgb(26, 105, 124);
+$dark-pink: #d7008e;
+
+$title-font-size: 1.33rem;
+$normal-font-size: 0.83rem;
+$small-font-size: 0.72rem;
+$smaller-font-size: 0.67rem;
+$smallest-font-size: 0.61rem;
+
+html,
+body {
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
 }
 
-h1,
-p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#amour-board {
+  margin-left: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  li {
+    display: inline-block;
+    scroll-snap-align: start;
+    width: 300px;
+    height: 400px;
+    margin: 0 7px;
+    background-color: grey;
+    border-radius: 16px;
+  }
+  ul {
+    width: max-content;
+  }
 }
+#filters {
+  margin: 60px 0 30px;
+  background-color: rgb(202, 202, 202);
+  overflow-x: auto;
+
+  button {
+    background-color: rgba(255, 255, 255, 0.692);
+    color: black;
+    padding: 5px 10px;
+    border: white 1px solid;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  li {
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+  }
+  ul {
+    padding: 5px;
+    width: max-content;
+  }
+
+  .active {
+    a {
+      background-color: $neutral-primary;
+    }
+    .cancel {
+      display: block;
+    }
+  }
+  .cancel {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $neutral-primary;
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.473);
+  }
+}
+#top-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: grey;
+}
+
